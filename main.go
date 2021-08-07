@@ -1,6 +1,8 @@
 package main
 
 import (
+	"os"
+
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -16,6 +18,12 @@ func main() {
 
 	app.Static("/", "./public")
 
-	app.Listen(":3000")
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		port = "3000"
+	}
+
+	app.Listen(":" + port)
 
 }
