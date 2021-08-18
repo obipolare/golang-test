@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/tailwind.css" />
+    <link rel="shortcut icon" href="/img/gopher.png" type="image/x-icon">
     <title>{{title}}</title>
   </head>
   <body class="h-full text-white bg-gray-900">
@@ -23,22 +24,26 @@
           <li class="px-4">
             <a
               class="uppercase transition duration-200 hover:text-gray-300"
-              href="/"
+              href="/projects"
               >Proyectos</a
             >
           </li>
           <li class="px-4">
             <a
-              class="uppercase transition duration-200 hover:text-gray-300"
-              href="/"
+              id="talk" class="uppercase transition duration-200 hover:text-gray-300"
+              href="lets-talk"
               >Hablemos</a
             >
           </li>
         </ul>
-        <button
+        {{!-- <button
           class="px-4 py-2 font-semibold text-black bg-green-500 rounded-3xl"
         >
           Descargar Curriculum
-        </button>
+        </button> --}}
+        <a href="#_" class="relative rounded-3xl px-5 py-2.5 overflow-hidden group bg-green-500 relative hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300 font-semibold text-gray-900">
+          <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+          <span class="relative">Descargar Curriculum</span>
+        </a>
       </nav>
     </header>

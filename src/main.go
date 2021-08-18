@@ -24,13 +24,19 @@ func main() {
 		})
 	})
 
-	// app.Get("/layout", func(c *fiber.Ctx) error {
-	// 	// Render index within layouts/main
-	// 	return c.Render("index", fiber.Map{
-	// 		"Title": "Hello, World!",
-	// 	}, "layouts/main")
-	// })
+	app.Get("/projects", func(c *fiber.Ctx) error {
+		return c.Render("projects", fiber.Map{
+			"Title": "This is images",
+		})
+	})
 
+	app.Get("/lets-talk", func(c *fiber.Ctx) error {
+		return c.Render("lets-talk", fiber.Map{
+			"Title": "This is images",
+		})
+	})
+
+	// Port
 	port := os.Getenv("PORT")
 
 	if port == "" {
